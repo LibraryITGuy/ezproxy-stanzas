@@ -1,1 +1,29 @@
+S&P Global NetAdvantage
 
+-- Begin Stanza --
+AnonymousURL -Options +https://charting.capitaliq.com/*
+AnonymousURL -Options +https://iag-ciqplus.capitaliq.com/*
+Option CookiePassThrough
+Title S&P Global NetAdvantage
+HTTPHeader -ignoreGlobal Accept-Encoding
+HTTPHeader -request -block Accept-Encoding
+URL http://na.capitaliq.com/ip/[SITE]  
+HJ https://www.capitaliq.com
+HJ http://www.capitaliq.com
+Host https://na.capitaliq.com
+Host https://capitaliq.com
+D na.capitaliq.com
+D capitaliq.com
+DJ na.capitaliq.com
+DJ capitaliq.com
+DJ ciqimg.com
+DJ mhfi.com
+DJ spglobal.com
+DJ capitaliq.com.cdn.cloudflare.net
+DJ ciqimg.com.cdn.cloudflare.net
+Find location.hostname
+Replace location.host
+Option Cookie
+-- End Stanza --
+
+Notes: -- replace [SITE] with your institution ID/name --
